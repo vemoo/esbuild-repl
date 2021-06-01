@@ -1,4 +1,5 @@
 {
+    "name": "@hyrious/esbuild-repl",
     "private": true,
     "scripts": {
         "dev": "vite",
@@ -6,7 +7,7 @@
         "preview": "vite preview"
     },
     "devDependencies": {
-        "esbuild": "^0.11.23",
-        "vite": "^2.3.2"
+        "esbuild": "^0.12.5",
+        "vite": "^2.3.5"
     }
 }
