@@ -1,1 +1,104 @@
-@import "https://cdn.jsdelivr.net/npm/modern-normalize@1.0.0/modern-normalize.css";
+@import 'https://cdn.jsdelivr.net/npm/modern-normalize@1.0.0/modern-normalize.css';
+
+body {
+  --bg-color: #fff;
+  --color: #222;
+  --title-color: #000;
+  --code-color: #222;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --bg-color: #191919;
+    --color: #aaa;
+    --title-color: #ddd;
+    --code-color: #ccc;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--color);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  margin: 0;
+  padding: 12px;
+  font-size: 1.5rem;
+}
+
+main {
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+main > section {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+main > section > textarea {
+  position: relative;
+  outline: none;
+  background: rgba(127, 127, 127, 0.1);
+  border: 1px solid rgba(127, 127, 127, 0.5);
+  border-radius: 10px;
+  padding: 8px 10px;
+  overflow-x: auto;
+  font-family: monospace;
+  resize: none;
+  color: var(--code-color);
+}
+
+.left textarea {
+  border-top-left-radius: 0;
+}
+
+.right textarea {
+  border-top-right-radius: 0;
+}
+
+main > section > h4 {
+  margin: 0;
+}
+
+main > section > h4 > span > span {
+  display: inline-block;
+  outline: none;
+  padding: 5px 8px;
+}
+
+main > section > h4 > span {
+  display: inline-block;
+  font-weight: normal;
+  background: rgba(127, 127, 127, 0.1);
+  border: 1px solid rgba(127, 127, 127, 0.5);
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-width: 0;
+}
+
+.left h4 {
+  text-align: left;
+}
+
+.right h4 {
+  text-align: right;
+}

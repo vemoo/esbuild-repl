@@ -4,10 +4,28 @@
   <meta charset="UTF-8">
   <meta name="color-scheme" content="light dark">
   <meta name="viewport" content="width=device-width">
-  <title>esbuild.repl</title>
+  <title>esbuild - REPL</title>
+  <link rel="icon" type="image/svg+xml" href="https://esbuild.github.io/favicon.svg">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <script type="module" src="/main.ts"></script>
+  <header>
+    <h1>esbuild.repl</h1>
+  </header>
+  <main>
+    <section class="left">
+      <h4>
+        <span>
+          <span contenteditable>main.ts</span>
+        </span>
+      </h4>
+      <textarea></textarea>
+    </section>
+    <section class="right">
+      <h4><span><span>bundle.js</span></span></h4>
+      <textarea readonly></textarea>
+    </section>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
