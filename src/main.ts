@@ -1,5 +1,4 @@
-import { getVersion, initialize } from './esbuild'
-import { virtual, virtualFiles } from './virtual'
+import './theme'
 
 // async function main() {
 //   const version = await getVersion()
