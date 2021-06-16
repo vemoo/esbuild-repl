@@ -44,7 +44,7 @@ h1 {
 header {
   display: flex;
   align-items: baseline;
-  padding: 0 12px;
+  padding: 0 16px;
 }
 
 a {
@@ -59,12 +59,4 @@ a:active {
 
 #toggle-theme {
   cursor: pointer;
-}
-
-.splitter {
-  flex-grow: 1;
-}
-
-.self-center {
-  align-self: center;
 }
