@@ -1,16 +1,14 @@
-import './theme'
+import { basicSetup, EditorState, EditorView } from "@codemirror/basic-setup";
+import { javascript } from "@codemirror/lang-javascript";
 
-// async function main() {
-//   const version = await getVersion()
-//   const esbuild = await initialize(version)
-//   console.log(esbuild.version)
-//   const result = await esbuild.build({
-//     stdin: { contents: `import React from "react"; console.log(react)` },
-//     bundle: true,
-//     format: 'esm',
-//     plugins: [virtual],
-//   })
-//   console.log(result.outputFiles![0].text)
-// }
+navigator.serviceWorker
+  .register("./sw.js")
+  .then(r => console.log("registered service worker with scope:", r.scope))
+  .catch(err => console.log("failed to register service worker", err));
 
-// main().catch(console.error)
+let editor = new EditorView({
+  state: EditorState.create({
+    extensions: [basicSetup, javascript()],
+  }),
+  parent: document.querySelector("#app")!,
+});

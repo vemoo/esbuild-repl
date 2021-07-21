@@ -2,6 +2,13 @@
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.sortImports": true
+  },
+  "prettier.tabWidth": 2,
+  "prettier.endOfLine": "auto",
+  "prettier.arrowParens": "avoid",
+  "prettier.printWidth": 120,
+  "[html]": {
+    "editor.defaultFormatter": null
   }
 }
